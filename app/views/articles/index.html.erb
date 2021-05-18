@@ -1,11 +1,16 @@
 <p id="notice"><%= notice %></p>
+<h1 style="color: #FFF;">Articles</h1>
+<%= link_to 'New Article', new_article_path %>
 <div class="wrapper">
-  <h1>Articles</h1>
   <div class="left">
     <div class="left-inner">
       <ul style="list-style: none;">
         <% @articles.each do |article| %>
-          <li><%= article.title %></li>
+          <li>
+            <%= link_to article do %><i class="far fa-eye"></i><% end %>&nbsp;&nbsp;
+            <%= link_to edit_article_path(article) do %><i class="far fa-edit"></i><% end %>&nbsp;&nbsp;
+            <%= link_to article, method: :delete, data: {confirm: 'Are you sure?' } do %><i class="fas fa-bomb"></i><% end %>&nbsp;&nbsp;
+            <strong><%= article.title %></strong></li>
         <% end %>
       </ul>
     </div>
@@ -14,14 +19,13 @@
     <div class="right-inner">
       <ul style="list-style: none;">
         <% @articles.each do |article| %>
-          <li><%= link_to article do %><i class="far fa-eye"></i><% end %><%= article.content %><%= link_to 'Edit', edit_article_path(article) %><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          <li><%= article.content %></li>
         <% end %>
       </ul>
     </div>
   </div>
   <br>
 
-  <%= link_to 'New Article', new_article_path %>
 </div>
 
 

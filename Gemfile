@@ -5,7 +5,7 @@ ruby '2.6.6'
 
 #added by me
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

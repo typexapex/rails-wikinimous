@@ -13,8 +13,10 @@
  *= require_tree .
  *= require_self
  */
- @import "font-awesome";
 
+body {
+  background: linear-gradient(0deg, #000 25%, #66CCFF 70%);
+}
 .wrapper {
   margin: 0 auto;
   width: 100vw;
@@ -33,6 +35,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-top: 5px ridge black;
+  border-bottom: 8px outset black;
+  margin-right: 19px;
 }
 
 .right {
@@ -44,6 +49,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-top: 5px ridge black;
+  border-bottom: 8px outset black;
+  margin-left: 19px;
 }
 
 li {
@@ -56,5 +64,5 @@ ul {
 }
 
 .left-inner li {
-  padding-left: 50%;
+  padding-left: 40%;
 }
